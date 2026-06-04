@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../src/output.css" rel="stylesheet">
+</head>
+<body class="bg-slate-800 ">
+    <!-- <h1 class="text-yellow-500 text-4xl m-0.5">Test</h1> -->
+     <!-- Navbar start here -->
+        <nav class="w-full h-14 bg-amber-50 flex justify-between px-4 items-center md:px-4">
+            <div class="text-cyan-400 font-bold">INVENT</div>
+            <ul class="md:flex hidden font-semibold ">
+                <li class="mx-2.5 cursor-pointer">Home</li>
+                <li class="mx-2.5 cursor-pointer">About Us</li>
+                <li class="mx-2.5 cursor-pointer">Contact Us</li>
+            </ul>
+            <div class="hidden md:block px-2 py-2 bg-[#3B7597] rounded cursor-pointer">Login/SignUp</div>
+            <div class="md:hidden ">
+                <a class="text-4xl" href="">&#8801</a>
+            </div>
+        </nav>
+     <!-- navbar end here -->
+
+     <header class="w-full h-auto">
+        <img src="" alt="">
+        <div id = "head" class="h-screen flex items-center justify-center flex-col gap-3">
+            <p class="font-bold text-6xl text-amber-50 block">
+                Manage Your Inventory 
+                <!-- <span class="text-3xl ml-80">with</span> <br>
+                <span class="text-4xl ml-80">ease</span> -->
+            </p>
+             <button onclick="manage()" class="bg-amber-50 block rounded text-black p-2">Manage</button>
+             
+             <div id="menu" class="hidden mt-4">
+                    <button onclick="showAddForm()" class="bg-[#3B7597] text-white px-3 py-2 rounded-2xl">Add</button>
+                    <button onclick="getProduct()" class="bg-[#3B7597] text-white px-3 py-2 rounded-2xl">Display</button>
+                    <!-- <button onclick="delProduct()" class="bg-[#3B7597] text-white px-3 py-2 rounded-2xl">Delete</button> -->
+            </div>
+            <div id="addForm" class="hidden mt-4">
+                <input class="bg-white font-light" type="text" id="name" placeholder="Enter product name">
+                <input class="bg-white font-light"type="text" id="price" placeholder="Enter product price">
+                <button class="bg-[#3B7597] text-white px-3 py-2 rounded-2xl" onclick="addProduct()">Add Items</button>
+
+
+            </div>
+            <div id="productList" class="hidden">
+                <h2 class="text-white text-2xl mb-4">Product List</h2>
+
+                <table class="bg-white border border-gray-300 w-full">
+                <thead>
+                <tr class="bg-[#3B7597] text-white">
+                           <th class="border p-2">ID</th>
+                           <th class="border p-2">Product Name</th>
+                            <th class="border p-2">Price</th>
+                            <th class="border p-2">Action</th>
+                </tr>
+                </thead>
+
+                <tbody id="productTableBody">
+                </tbody>
+                </table>
+            </div>
+            <div id="deleteSection" class="hidden">
+                <h2>Delete Product</h2>
+            </div>
+
+                
+            
+        </div>
+       
+
+     </header>
+     
+        
+            
+        <script src="../src/app.js"></script>
+     
+
+</body>
+</html>
